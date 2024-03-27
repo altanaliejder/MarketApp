@@ -1,0 +1,27 @@
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+
+spring:
+  datasource:
+    password: admin
+    url: jdbc:postgresql://localhost:5433/userDb
+    username: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+      javax:
+        persistence:
+          validation:
+            mode: none
+  application:
+    name: user-service
+
+
